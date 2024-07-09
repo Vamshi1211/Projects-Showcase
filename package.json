@@ -15,7 +15,9 @@
     "msw": "0.28.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-js-pagination": "3.0.3",
     "react-loader-spinner": "4.0.0",
+    "react-paginate": "8.2.0",
     "styled-components": "5.3.0"
   },
   "devDependencies": {

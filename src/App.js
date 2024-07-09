@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
-import ProjectItem from './components/ProjectItem'
+// import ProjectItem from './components/ProjectItem'
+import PaginationPage from './components/PaginationPage'
 import './App.css'
 
 const categoriesList = [
@@ -19,7 +20,11 @@ const apiStatusValue = {
 }
 
 class App extends Component {
-  state = {apiStatus: apiStatusValue.initial, categoryId: 'ALL', projects: []}
+  state = {
+    apiStatus: apiStatusValue.initial,
+    categoryId: 'ALL',
+    projects: [],
+  }
 
   componentDidMount() {
     this.getProjects()
@@ -54,11 +59,14 @@ class App extends Component {
     const {projects} = this.state
 
     return (
-      <ul className="list-container">
-        {projects.map(eachItem => (
-          <ProjectItem key={eachItem.id} eachProject={eachItem} />
-        ))}
-      </ul>
+      <>
+        {/* <ul className="list-container">
+          {projects.map(eachItem => (
+            <ProjectItem key={eachItem.id} eachProject={eachItem} />
+          ))}
+        </ul> */}
+        <PaginationPage itemsPerPage={4} projects={projects} />
+      </>
     )
   }
 

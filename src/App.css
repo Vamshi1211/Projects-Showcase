@@ -58,13 +58,6 @@ body {
   align-items: center;
 }
 
-.list-container {
-  padding-left: 0px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 60px;
-}
-
 .failure-container {
   min-height: 100vh;
   display: flex;
@@ -103,4 +96,9 @@ body {
   border: none;
   border-radius: 8px;
   padding: 10px 24px 10px 24px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
 }
